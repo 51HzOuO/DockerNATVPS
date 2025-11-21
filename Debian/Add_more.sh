@@ -181,4 +181,11 @@ do
   ssh_port=$((nat_end + 1))
 done
 
+# 提示用户查看 output.log
+if [ "$LANG" = "1" ]; then
+  echo "All chicken information has been recorded in the output.log file, please check it for passwords and other details."
+else
+  echo "所有小鸡的信息已记录在 output.log 文件中，请查看该文件获取密码等详情。"
+fi
+
 msg batch_complete
